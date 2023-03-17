@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: test-component-lwck
+  namespace: build-e2e-xuuo-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio-qe/test-images@sha256:d62938e26aaa85c035db5519adb23b9dfaab8d29914c0a2f69bb617243f8af5c
+        name: my-python
+        resources: {}
+status: {}
